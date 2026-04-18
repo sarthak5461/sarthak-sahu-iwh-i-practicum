@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Custom Object Records
+
+    a(href="/update-cobj") Add to this table
+
+    if data && data.length
+      table(border="1")
+        thead
+          tr
+            th Name
+            th Launch Year
+            th Completed
+
+        tbody
+          each record in data
+            tr
+              td= record.properties.name
+              td= record.properties.lanuch_year
+              td= record.properties.completed
+    else
+      p No custom object records found.

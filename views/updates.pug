@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Add New Record
+
+    a(href="/") Return to homepage
+
+    form(action="/update-cobj" method="POST")
+      
+      label(for="name") Name:
+      input(type="text" name="name" required)
+      br
+
+      label(for="lanuch_year") Launch Year:
+      input(type="number" name="lanuch_year" required)
+      br
+
+      label(for="completed") Completed:
+      select(name="completed")
+        option(value="true") Yes
+        option(value="false") No
+      br
+
+      button(type="submit") Submit
